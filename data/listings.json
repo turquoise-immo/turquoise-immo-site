@@ -1,0 +1,34 @@
+[
+  {
+    "id": "A100",
+    "title": "Bel appartement lumineux 3 pièces",
+    "price": 350000,
+    "surface": 72,
+    "city": "Paris",
+    "type": "Appartement",
+    "transaction": "Vente",
+    "offerDemand": "Offre",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "images": [
+      "https://images.unsplash.com/photo-1560185127-6d6d7f0c1949?q=80&w=1200"
+    ],
+    "description": "Appartement central, proche commerces."
+  },
+  {
+    "id": "M201",
+    "title": "Maison familiale avec jardin",
+    "price": 620000,
+    "surface": 150,
+    "city": "Lyon",
+    "type": "Maison",
+    "transaction": "Vente",
+    "offerDemand": "Offre",
+    "lat": 45.764,
+    "lng": 4.8357,
+    "images": [
+      "https://images.unsplash.com/photo-1599423300746-b62533397364?q=80&w=1200"
+    ],
+    "description": "Maison 4 chambres."
+  }
+]

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Turquoise.Immo</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/></head>
+<body>
+<header class="site-header"><div class="container header-inner"><div class="brand"><a href="#home"><img class="logo" src="https://images.unsplash.com/photo-1560185127-6d6d7f0c1949?q=80&w=200" alt="logo"> <span>Turquoise.Immo</span></a></div>
+<nav class="main-nav"><a href="#home">Accueil</a><a href="#listings">Annonces</a><a href="#about">À propos</a><a href="#contact">Contact</a><a href="/admin.html">Admin</a></nav>
+<button class="btn-primary nav-cta" id="openFavorites"><i class="fa fa-heart"></i> Favoris <span id="favCount">0</span></button></div></header>
+<main>
+<section id="home" class="hero"><div class="container hero-inner"><div class="hero-left"><h1>Trouvez votre logement — <span>Turquoise.Immo</span></h1><p>Vente, achat, location. Recherche avancée et RDV en ligne.</p><a class="btn-primary large" href="#listings">Voir les annonces</a></div><div class="hero-right"><div id="map"></div></div></div></section>
+<section id="listings" class="section listings-section"><div class="container"><h2>Annonces</h2><div class="search-card"><div class="filters">
+<label>Ville<input id="filterCity" /></label><label>Type<select id="filterType"><option value=''>Tous</option><option>Appartement</option><option>Maison</option></select></label>
+<label>Transaction<select id="filterTransaction"><option value=''>Tous</option><option>Vente</option><option>Achat</option><option>Location</option></select></label>
+<label>Offre/Demande<select id="filterOfferDemand"><option value=''>Tous</option><option>Offre</option><option>Demande</option></select></label>
+<label>Prix ≤<input id="filterMaxPrice" type="number"/></label><label>Surface ≥<input id="filterMinSurface" type="number"/></label>
+<button id="applyFilters" class="btn-primary">Appliquer</button><button id="resetFilters" class="btn-secondary">Réinitialiser</button>
+</div></div><div id="listingsGrid" class="grid-listings"></div><div id="noResults" style="display:none">Aucune annonce trouvée.</div></div></section>
+<section id="about" class="section"><div class="container"><h2>À propos</h2><p>Turquoise.Immo — agence moderne en ligne.</p></div></section>
+<section id="contact" class="section"><div class="container contact-inner"><div class="card"><h2>Contact</h2><form id="contactForm"><label>Nom<input id="contactName" required></label><label>Email<input id="contactEmail" required></label><label>Message<textarea id="contactMessage" required></textarea></label><button class="btn-primary" type="submit">Envoyer</button></form><div id="contactSuccess" style="display:none">Merci — message envoyé.</div></div>
+<div class="card"><h3>Infos</h3><p>Email: contact@turquoise.immo</p></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Turquoise.Immo</p></div></footer>
+<div id="favPanel" style="display:none"><h3>Favoris</h3><div id="favList"></div><button id="closeFav" class="btn-secondary">Fermer</button></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app-api.js"></script></body></html>

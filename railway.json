@@ -1,0 +1,5 @@
+{
+  "name": "turquoise-imo",
+  "start": "npm start",
+  "platform": "node"
+}
